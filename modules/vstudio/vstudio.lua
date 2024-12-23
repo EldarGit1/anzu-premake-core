@@ -29,6 +29,7 @@
 		x86_64  = "x64",
 		ARM     = "ARM",
 		ARM64   = "ARM64",
+		orbis   = "ORBIS",
 	}
 
 	vstudio.vs2010_architectures =

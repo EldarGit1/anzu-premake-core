@@ -838,6 +838,7 @@
 		["solaris"]    = { "solaris", "posix", "desktop" },
 		["uwp"]        = { "uwp", "windows", "desktop" },
 		["windows"]    = { "windows", "win32", "desktop" },
+		["orbis"]      = { "ps4" },
 	}
 
 	function os.getSystemTags(name)
