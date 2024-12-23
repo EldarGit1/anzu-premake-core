@@ -446,6 +446,7 @@
 			"ConsoleApp",
 			"Makefile",
 			"None",
+			"PRXSharedLib",
 			"SharedLib",
 			"StaticLib",
 			"WindowedApp",
@@ -1386,6 +1387,10 @@
 	filter { "kind:StaticLib" }
 		targetprefix "lib"
 		targetextension ".a"
+
+	filter { "kind:PRXSharedLib" }
+		targetprefix ""
+		targetextension ".prx"
 
 	-- Add variations for other Posix-like systems.
 
