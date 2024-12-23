@@ -33,6 +33,7 @@
 			p.WASM32,
 			p.WASM64,
 			p.ORBIS,
+			p.PROSPERO,
 		},
 		aliases = {
 			i386  = p.X86,
@@ -854,6 +855,7 @@
 			"wii",
 			"windows",
 			"orbis",
+			"prospero",
 		},
 	}
 

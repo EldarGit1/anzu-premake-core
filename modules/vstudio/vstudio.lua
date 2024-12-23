@@ -30,6 +30,7 @@
 		ARM     = "ARM",
 		ARM64   = "ARM64",
 		orbis   = "ORBIS",
+		prospero = "PROSPERO",
 	}
 
 	vstudio.vs2010_architectures =
