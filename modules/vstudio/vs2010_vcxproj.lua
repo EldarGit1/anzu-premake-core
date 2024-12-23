@@ -814,7 +814,7 @@
 				m.linkTimeCodeGeneration,
 				m.additionalDependencies,
 				m.additionalLibraryDirectories,
-				m.importLibrary,
+				--m.importLibrary, no need to import lib, default is good for us
 				m.entryPointSymbol,
 				m.generateMapFile,
 				m.moduleDefinitionFile,
@@ -2629,8 +2629,18 @@
 		p.w('<Import Project="$(VCTargetsPath)\\Microsoft.Cpp.targets" />')
 	end
 
+	function m.importOrbisTargets(prj)
+		p.w('<Import Condition="Exists(\'$(VCTargetsPath)\\BuildCustomizations\\OrbisWavePsslc.targets\')" Project="$(VCTargetsPath)\\BuildCustomizations\\OrbisWavePsslc.targets" />')
+		p.w('<Import Condition="Exists(\'$(VCTargetsPath)\\BuildCustomizations\\SCU.targets\')" Project="$(VCTargetsPath)\\BuildCustomizations\\SCU.targets" />')
+	end
+
+	function m.importProsperoTargets(prj)
+
+	end
+
 	m.elements.importExtensionTargets = function(prj)
 		return {
+			m.importOrbisTargets,
 			m.importGroupTargets,
 			m.importRuleTargets,
 			m.importNuGetTargets,
@@ -2728,8 +2738,18 @@
 		p.w('<Import Project="$(VCTargetsPath)\\Microsoft.Cpp.props" />')
 	end
 
+	function m.importOrbisSettings(prj)
+		p.w('<Import Condition="Exists(\'$(VCTargetsPath)\\BuildCustomizations\\OrbisWavePsslc.props\')" Project="$(VCTargetsPath)\\BuildCustomizations\\OrbisWavePsslc.props" />')
+		p.w('<Import Condition="Exists(\'$(VCTargetsPath)\\BuildCustomizations\\SCU.props\')" Project="$(VCTargetsPath)\\BuildCustomizations\\SCU.props" />')
+	end
+
+	function m.importProsperoSetttings(prj)
+
+	end
+
 	m.elements.importExtensionSettings = function(prj)
 		return {
+			m.importOrbisSettings,
 			m.importGroupSettings,
 			m.importRuleSettings,
 			m.importNuGetProps,
