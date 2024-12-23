@@ -1964,6 +1964,16 @@
 ---------------------------------------------------------------------------
 
 	function m.additionalDependencies(cfg, explicit)
+		-- in order to build a prx we need this dependency
+		local arch = vstudio.archFromConfig(cfg, true)
+
+		if arch == "ORBIS" or arch == "PROSPERO" then
+			p.push('<AdditionalDependencies>')
+			p.w('-lSceNet_stub_weak')
+			p.pop('</AdditionalDependencies>')
+		end
+		--
+
 		local links
 
 		-- check to see if this project uses an external toolset. If so, let the
@@ -3099,6 +3109,13 @@
 	function m.platformToolset(cfg)
 		local tool, version = p.config.toolset(cfg)
 
+		--Orbis platform does not require the toolset at all so skip it.
+		local arch = vstudio.archFromConfig(cfg, true)
+
+		if arch == "ORBIS" or arch == "PROSPERO" then
+			return
+		end
+		--
 		if not version and _ACTION >= "vs2019" and cfg.toolset == "clang" then
 			version = "ClangCL"
 		end
