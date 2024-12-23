@@ -31,6 +31,7 @@
 		ARM64   = "ARM64",
 		orbis   = "ORBIS",
 		prospero = "PROSPERO",
+		win     = "x64" --needed to add our own win arch since premake shits into its.
 	}
 
 	vstudio.vs2010_architectures =

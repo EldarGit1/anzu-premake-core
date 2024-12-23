@@ -68,6 +68,7 @@
 	premake.WASM64 = "wasm64"
 	premake.ORBIS  = "orbis"
 	premake.PROSPERO = "prospero"
+	premake.WIN    = "win"
 
 
 ---

@@ -34,6 +34,7 @@
 			p.WASM64,
 			p.ORBIS,
 			p.PROSPERO,
+			p.WIN
 		},
 		aliases = {
 			i386  = p.X86,
@@ -856,6 +857,7 @@
 			"windows",
 			"orbis",
 			"prospero",
+			"win"
 		},
 	}
 
@@ -1453,5 +1455,8 @@
 
 	filter { "platforms:Win64" }
 		architecture "x86_64"
+
+	filter { "platforms:WIN", "kind:SharedLib" }
+		targetextension ".dll"
 
 	filter {}
