@@ -2325,6 +2325,7 @@
 
 	function m.configurationType(cfg)
 		local types = {
+			PRXSharedLib = "DynamicLibrary",
 			SharedLib = "DynamicLibrary",
 			StaticLib = "StaticLibrary",
 			ConsoleApp = "Application",
