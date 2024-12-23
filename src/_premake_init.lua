@@ -31,7 +31,8 @@
 			p.RISCV64,
 			p.LOONGARCH64,
 			p.WASM32,
-			p.WASM64
+			p.WASM64,
+			p.ORBIS,
 		},
 		aliases = {
 			i386  = p.X86,
@@ -852,6 +853,7 @@
 			"uwp",
 			"wii",
 			"windows",
+			"orbis",
 		},
 	}
 
