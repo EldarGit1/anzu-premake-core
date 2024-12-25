@@ -8,7 +8,7 @@
 
 	local p = premake
 	local api = p.api
-
+	print("anzu-premake-core")
 	local DOC_URL = "See https://github.com/premake/premake-core/wiki/"
 
 
