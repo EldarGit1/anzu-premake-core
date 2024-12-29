@@ -33,7 +33,7 @@
 	premake.CSHARP      = "C#"
 	premake.GCC         = "gcc"
 	premake.HAIKU       = "haiku"
-	premake.ANDROID     = "android"
+	premake.ANDROID     = "android_studio"
 	premake.EMSCRIPTEN  = "emscripten"
 	premake.IOS         = "ios"
 	premake.LINUX       = "linux"
